@@ -161,7 +161,19 @@ int main(){
             }
               break;
             case 3:{//Reproductor
-              
+              int pos;
+              cout << "Mostrar Playlists" << endl;
+              for(int i = 0; i < listaPlaylists.size(); i++){
+                cout << i << " - " <<
+                listaPlaylists.at(i)->getNombre() << endl;
+              }
+              cout << "Seleccione un playlist" << endl;
+              cin >> pos;
+              /*
+              for(int i = 0; i < listaPlaylists.size(); i++){
+                cout << i << " - " <<
+                listaPlaylists.at(pos)->getListaCanciones()[i]->getTitulo();
+              }*/
             }
               break;
             case 0:{
