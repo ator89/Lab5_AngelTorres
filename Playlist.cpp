@@ -1,4 +1,5 @@
 #include "Playlist.h"
+#include "Cancion.h"
 
 #include <vector>
 using std::vector;
@@ -26,10 +27,14 @@ vector<Cancion*> Playlist::getListaCanciones(){
 }
 
 //Setters
-void Cancion::setCancion(Cancion* cancion){
+void Playlist::setListaCanciones(vector<Cancion*> listaCanciones){
+    this-> listaCanciones = listaCanciones;
+}
+
+void Playlist::setCancion(Cancion* cancion){
     this->listaCanciones.push_back(cancion);
 }
 
-void Cancion::setNombre(string nombre){
+void Playlist::setNombre(string nombre){
     this->nombre = nombre;
 }

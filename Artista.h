@@ -1,34 +1,35 @@
-#ifndef PLAYLIST_H
-#define PLAYLIST_H
+#ifndef ARTISTA_H
+#define ARTISTA_H
 
 #include "Cancion.h"
+#include <string>
+using std::string;
 #include <vector>
 using std::vector;
 
-#include <string>
-using std::string;
-
-class Playlist{
+class Artista{
     private:
         string nombre;
         vector<Cancion*> listaCanciones;
+        int reproducciones;
     public:
         //Constructores
-        Playlist();
-        Playlist(string);
-
+        Artista();
+        Artista(string, int);
         //Destructor
-        ~Playlist();
+        ~Artista();
 
         //Getters
         string getNombre();
+        int getReproducciones();
         vector<Cancion*> getListaCanciones();
-        
+
         //Setters
         void setNombre(string);
+        void setReproducciones(int);
         void setListaCanciones(vector<Cancion*>);
         void setCancion(Cancion*);
-
+        
 };
 
 #endif
