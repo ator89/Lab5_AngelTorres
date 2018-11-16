@@ -19,9 +19,11 @@ int main(){
     Cancion* cancion;
     Artista* artista;
     Playlist* playlist;
+    Radio* radio;
     vector<Cancion*> listaCanciones;
     vector<Artista*> listaArtistas;
     vector<Playlist*> listaPlaylists;
+    vector<Radio*> listaRadios;
 
     bool v1 = true;
     int men = -1;
@@ -116,6 +118,20 @@ int main(){
                         cout << "Agregado exitosamente"<< endl;
                       }break;
                       case 4:{//Crear Radio
+                        string nombreRadio;
+                        string generoRadio;
+                        cout << "Crear Radio" << endl;
+
+                        cout << "Nombre de Radio: " << endl;
+                        cin >> nombreRadio;
+
+                        cout << "Genero de Radio: " << endl;
+                        cin >> generoRadio;
+
+                        radio = new Radio(nombreRadio,generoRadio);
+                        listaRadios.push_back(radio);
+
+                        cout << "Agregado exitosamente"<< endl;
 
                       }break;
                       case 0:{}break;
@@ -130,11 +146,22 @@ int main(){
             }
               break;
             case 2:{//Mostrar
-
+              cout << "Mostrar Playlists" << endl;
+              for(int i = 0; i < listaPlaylists.size(); i++){
+                cout << i << " - " <<
+                listaPlaylists.at(i)->getNombre() << endl;
+              }
+              cout << endl << endl;
+              cout << "Mostrar Radios" << endl;
+              for(int i = 0; i < listaRadios.size(); i++){
+                cout << i << " - " <<
+                listaRadios.at(i)->getNombre() << endl;
+              }
+              cout << endl << endl;
             }
               break;
             case 3:{//Reproductor
-
+              
             }
               break;
             case 0:{
