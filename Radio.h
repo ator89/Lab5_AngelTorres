@@ -27,7 +27,7 @@ class Radio{
         //Setters
         void setNombre(string);
         void setGenero(string);
-        void getListaCanciones(vector<Cancion*>);
+        void setListaCanciones(vector<Cancion*>);
         void setCancion(Cancion*);
 };
 
