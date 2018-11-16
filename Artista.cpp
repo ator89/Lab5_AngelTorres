@@ -14,9 +14,9 @@ Artista::Artista(){
     this->reproducciones = 0;
 }
 
-Artista::Artista(string nombre, int reproducciones){
+Artista::Artista(string nombre/*, int reproducciones*/){
     this->nombre = nombre;
-    this->reproducciones = reproducciones;
+    //this->reproducciones = reproducciones;
 }
 
 Artista::~Artista(){

@@ -14,16 +14,16 @@ class Cancion{
         //Constructores
         Cancion();
         Cancion(string, string, int, int);
-        
+
         //Destructor
         ~Cancion();
-        
+
         //Getters
         string getTitulo();
         string getGenero();
         int getDuracion();
         int getReproducciones();
-        
+
         //Setters
         void setTitulo(string);
         void setGenero(string);

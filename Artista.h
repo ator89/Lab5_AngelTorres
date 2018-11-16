@@ -15,7 +15,7 @@ class Artista{
     public:
         //Constructores
         Artista();
-        Artista(string, int);
+        Artista(string/*, int*/);
         //Destructor
         ~Artista();
 
@@ -29,7 +29,7 @@ class Artista{
         void setReproducciones(int);
         void setListaCanciones(vector<Cancion*>);
         void setCancion(Cancion*);
-        
+
 };
 
 #endif
